@@ -45,8 +45,8 @@ var app = {
                 ndefMessage = tag.ndefMessage;
 
                 // alert(JSON.stringify(ndefMessage));
-                // scanData();
-                alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
+                scanData();
+//                 alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
             function () { // success callback
                 alert("Waiting for NDEF tag");
