@@ -44,10 +44,75 @@
 
 <body>
     <div class="app">
-        <h1>Hello Lauren</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
+
+        <div style="display:inline-block">Figurine:
+        <p id="figurine">empty</p>
+        </div>
+        <div style="display:inline-block">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+        <div style="display:inline-block">Phone:
+        <p id="phone">data</p>
+        </div>
+        <br>
+        <button id="save">Save</button>
+        <button id="scan">Scan</button>
+        <button id="log">Log</button>
+        <button id="change">Switch!</button>
+
+    </div>
+     <script>
+var savePage = false;
+var x = "data";
+var phone = document.getElementById("phone");
+var figurine = document.getElementById("figurine");
+
+save.addEventListener("click", function() {
+    savePage = true;
+}
+
+scan.addEventListener("click", function() {
+    scanData();
+})
+
+log.addEventListener("click", function() {
+    console.log(x);
+    console.log(savePage);
+})
+
+change.addEventListener("click", function() {
+    changeStatus();
+    phone.innerHTML = x;
+})
+
+function changeStatus() {
+    if (x =="data") {
+        x ="empty";
+    } else if (x =="empty") {
+        x = "data";
+    }
+}
+
+function scanData() {
+    if (savePage == false) {
+        x = figurine.innerHTML;
+        phone.innerHTML = x;
+    } else if (savePage == true) {
+        figurine.innerHTML = x;
+        savePage = false;
+    }
+}
+
+
+    
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</body>
+
+</html>
         </div>
 
         <div style="display:inline-block">Figurine:
