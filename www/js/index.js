@@ -37,6 +37,16 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
+function scanData() {
+        if (savePage == false) {
+            x = figurine.innerHTML;
+            phone.innerHTML = x;
+        } else if (savePage == true) {
+            figurine.innerHTML = x;
+            savePage = false;
+        }
+    }
+
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         nfc.addNdefListener (
@@ -46,7 +56,8 @@ var app = {
 
                 // alert(JSON.stringify(ndefMessage));
                 scanData();
-//                 alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
+
+                // alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
             function () { // success callback
                 alert("Waiting for NDEF tag");
