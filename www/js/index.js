@@ -46,9 +46,14 @@ var app = {
                 ndefMessage = tag.ndefMessage;
 
                 // alert(JSON.stringify(ndefMessage));
-                scanData();
-
-                alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
+            if (savePage == false) {
+                x = figurine.innerHTML;
+                phone.innerHTML = x;
+            } else if (savePage == true) {
+                figurine.innerHTML = x;
+                savePage = false;
+            }
+                //alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
             function () { // success callback
                 alert("Waiting for NDEF tag");
