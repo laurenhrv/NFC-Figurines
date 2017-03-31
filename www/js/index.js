@@ -47,7 +47,7 @@ var app = {
 
                 // alert(JSON.stringify(ndefMessage));
             if (savePage == false) {
-                x = figurine.innerHTML;
+                x = nfc.bytesToString(ndefMessage[0].payload).substring(0);
                 phone.innerHTML = x;
             } else if (savePage == true) {
                 figurine.innerHTML = x;
