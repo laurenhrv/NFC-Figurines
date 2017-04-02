@@ -46,17 +46,19 @@ var app = {
                 ndefMessage = tag.ndefMessage;
 
                 // alert(JSON.stringify(ndefMessage));
-            if (savePage == false) {
-                x = nfc.bytesToString(ndefMessage[0].payload).substring(0, 3);
-                y = nfc.bytesToString(ndefMessage[0].payload).substring(5, 8);
-                z = nfc.bytesToString(ndefMessage[0].payload).substring(10, 13);
+
+            // if (savePage == false) {
+                x = nfc.bytesToString(ndefMessage[0].payload).substring(0, 4);
+                y = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
+                z = nfc.bytesToString(ndefMessage[0].payload).substring(10, 14);
                 phone1.innerHTML = x;
                 phone2.innerHTML = y;
                 phone3.innerHTML = z;
-            } else if (savePage == true) {
-                figurine.innerHTML = x;
-                savePage = false;
-            }
+            // } else if (savePage == true) {
+            //     figurine.innerHTML = x;
+            //     savePage = false;
+            // }
+            
                 //alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
             function () { // success callback
@@ -66,7 +68,7 @@ var app = {
                 alert("Error adding NDEF listener " + JSON.stringify(error));
             }
         );
-    },
+},
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
