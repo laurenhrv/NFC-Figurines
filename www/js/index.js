@@ -47,8 +47,12 @@ var app = {
 
                 // alert(JSON.stringify(ndefMessage));
             if (savePage == false) {
-                x = nfc.bytesToString(ndefMessage[0].payload).substring(0);
-                phone.innerHTML = x;
+                x = nfc.bytesToString(ndefMessage[0].payload).substring(0, 3);
+                y = nfc.bytesToString(ndefMessage[0].payload).substring(5, 8);
+                z = nfc.bytesToString(ndefMessage[0].payload).substring(10, 13);
+                phone1.innerHTML = x;
+                phone2.innerHTML = y;
+                phone3.innerHTML = z;
             } else if (savePage == true) {
                 figurine.innerHTML = x;
                 savePage = false;
