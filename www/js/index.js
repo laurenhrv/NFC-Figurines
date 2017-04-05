@@ -52,11 +52,17 @@ var app = {
                 b1 = nfc.bytesToString(ndefMessage[0].payload).substring(17, 20);
                 b2 = nfc.bytesToString(ndefMessage[0].payload).substring(20, 23);
                 b3 = nfc.bytesToString(ndefMessage[0].payload).substring(23, 26);
+                b4 = nfc.bytesToString(ndefMessage[0].payload).substring(17, 20);
+                b5 = nfc.bytesToString(ndefMessage[0].payload).substring(20, 23);
+                b6 = nfc.bytesToString(ndefMessage[0].payload).substring(23, 26);
                 c = nfc.bytesToString(ndefMessage[0].payload).substring(26, 40);
                 title.innerHTML = a;
                 stat1.innerHTML = b1;
                 stat2.innerHTML = b2;
                 stat3.innerHTML = b3;
+                stat4.innerHTML = b4;
+                stat5.innerHTML = b5;
+                stat6.innerHTML = b6;
                 bio.innerHTML = c;
             // } else if (savePage == true) {
             //     figurine.innerHTML = x;
