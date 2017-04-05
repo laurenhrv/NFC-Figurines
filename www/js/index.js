@@ -49,10 +49,10 @@ var app = {
 
             // if (savePage == false) {
                 a = nfc.bytesToString(ndefMessage[0].payload).substring(0, 17);
-                b1 = nfc.bytesToString(ndefMessage[0].payload).substring(17, 19);
-                b2 = nfc.bytesToString(ndefMessage[0].payload).substring(19, 21);
-                b3 = nfc.bytesToString(ndefMessage[0].payload).substring(21, 23);
-                c = nfc.bytesToString(ndefMessage[0].payload).substring(23, 40);
+                b1 = nfc.bytesToString(ndefMessage[0].payload).substring(17, 20);
+                b2 = nfc.bytesToString(ndefMessage[0].payload).substring(20, 23);
+                b3 = nfc.bytesToString(ndefMessage[0].payload).substring(23, 25);
+                c = nfc.bytesToString(ndefMessage[0].payload).substring(25, 40);
                 title.innerHTML = a;
                 stat1.innerHTML = b1;
                 stat2.innerHTML = b2;
