@@ -48,12 +48,16 @@ var app = {
                 // alert(JSON.stringify(ndefMessage));
 
             // if (savePage == false) {
-                x = nfc.bytesToString(ndefMessage[0].payload).substring(0, 4);
-                y = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
-                z = nfc.bytesToString(ndefMessage[0].payload).substring(10, 14);
-                phone1.innerHTML = x;
-                phone2.innerHTML = y;
-                phone3.innerHTML = z;
+                a = nfc.bytesToString(ndefMessage[0].payload).substring(0, 4);
+                b1 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
+                b2 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
+                b3 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
+                c = nfc.bytesToString(ndefMessage[0].payload).substring(10, 14);
+                title.innerHTML = a;
+                stat1.innerHTML = b1;
+                stat2.innerHTML = b2;
+                stat3.innerHTML = b3;
+                bio.innerHTML = c;
             // } else if (savePage == true) {
             //     figurine.innerHTML = x;
             //     savePage = false;
@@ -61,10 +65,10 @@ var app = {
             
                 //alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
-            function () { // success callback
+            function () { 
                 alert("Waiting for NDEF tag");
             },
-            function (error) { // error callback
+            function (error) { 
                 alert("Error adding NDEF listener " + JSON.stringify(error));
             }
         );
