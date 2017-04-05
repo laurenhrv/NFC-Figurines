@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+</head>
+
+<body>
+    <div class="app">
+
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+
+        <img src="img/mario-on.png"/>
+
+        <div id="content" style="display:inline-block">
+            <div id="title">"Venya - Elf - Rogue"&nbsp</div>
+
+            <div class="row">
+                <div id="stat1" style="display:inline-block">Words&nbsp
+                </div>
+
+                <div id="stat2" style="display:inline-block">MORE
+                </div>
+
+                <div id="stat3" style="display:inline-block">MORE
+                </div>
+            </div>
+
+            <div class="row">
+                    <div><h1>label</h1></div>
+                    <div><h1>label</h1></div>
+                    <div><h1>label</h1></div>
+            </div>
+
+            <div id="bio">Words&nbsp</div>
+        </div>
+
+        <br>
+<!--         <button id="save">Save</button>
+        <button id="change">Switch!</button> -->
+    </div>
+    <script>
+        // var savePage = false;
+        var a = "data";
+        var b1 = "data";
+        var b2 = "data";
+        var b3 = "data";
+        var c = "data";
+        var title = document.getElementById("title");
+        var stat1 = document.getElementById("stat1");
+        var stat2 = document.getElementById("stat2");
+        var stat3 = document.getElementById("stat3");
+        var bio = document.getElementById("bio");
+        // var figurine = document.getElementById("figurine");
+
+        // save.addEventListener("click", function() {
+        //     savePage = true;
+        // })
+
+        // change.addEventListener("click", function() {
+        //     changeStatus();
+        //     title.innerHTML = x;
+        // })
+
+        // function changeStatus() {
+        //     if (x =="data") {
+        //         x ="empty";
+        //     } else if (x =="empty") {
+        //         x = "data";
+        //     }
+        // }
+
+        // function scanData() {
+        //     if (savePage == false) {
+        //         x = figurine.innerHTML;
+        //         phone.innerHTML = x;
+        //     } else if (savePage == true) {
+        //         figurine.innerHTML = x;
+        //         savePage = false;
+        //     }
+        // }
+
+        </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</body>
+
+</html>
