@@ -48,11 +48,11 @@ var app = {
                 // alert(JSON.stringify(ndefMessage));
 
             // if (savePage == false) {
-                a = nfc.bytesToString(ndefMessage[0].payload).substring(0, 4);
-                b1 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
-                b2 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
-                b3 = nfc.bytesToString(ndefMessage[0].payload).substring(5, 9);
-                c = nfc.bytesToString(ndefMessage[0].payload).substring(10, 14);
+                a = nfc.bytesToString(ndefMessage[0].payload).substring(0, 17);
+                b1 = nfc.bytesToString(ndefMessage[0].payload).substring(17, 19);
+                b2 = nfc.bytesToString(ndefMessage[0].payload).substring(19, 21);
+                b3 = nfc.bytesToString(ndefMessage[0].payload).substring(21, 23);
+                c = nfc.bytesToString(ndefMessage[0].payload).substring(23, 40);
                 title.innerHTML = a;
                 stat1.innerHTML = b1;
                 stat2.innerHTML = b2;
