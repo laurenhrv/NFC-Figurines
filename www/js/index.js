@@ -68,7 +68,7 @@ var app = {
             //     figurine.innerHTML = x;
             //     savePage = false;
             // }
-            
+            document.getElementById("mario").src = "img/mario-on.png";
                 //alert(nfc.bytesToString(ndefMessage[0].payload).substring(0));
             }, 
             function () { 
