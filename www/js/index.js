@@ -78,9 +78,9 @@ var app = {
                 profother.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(56, 153);
                 profstats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(153, 235);
                 bio.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(235, 415);
-                spells.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(415, 492);
-                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(492, 593);
-                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(593, 594);
+                spells.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(415, 493);
+                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(493, 597);
+                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(597, 598);
                 document.getElementById("mario").src = "img/mario-on.png";
             } else if (nfc.bytesToString(ndefMessage[0].payload).substring(0, 3) == "Bre"){
                 title.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(0, 6);
