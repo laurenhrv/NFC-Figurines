@@ -77,10 +77,10 @@ var app = {
                 stat12.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(55, 56);
                 profother.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(56, 153);
                 profstats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(153, 235);
-                bio.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(235, 419);
-                spells.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(419, 450);
-                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(450, 553);
-                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(553, 554);
+                bio.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(235, 415);
+                spells.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(415, 488);
+                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(488, 653);
+                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(653, 654);
                 document.getElementById("mario").src = "img/mario-on.png";
             } else if (nfc.bytesToString(ndefMessage[0].payload).substring(0, 3) == "Bre"){
                 title.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(0, 6);
