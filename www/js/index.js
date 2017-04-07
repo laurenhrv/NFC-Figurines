@@ -35,8 +35,8 @@ var app = {
                 profstats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(153, 235);
                 bio.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(235, 546);
                 spells.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(546, 550);
-                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(550, 653);
-                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(653, 654);
+                feats.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(492, 593);
+                number.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(593, 594);
                 document.getElementById("mario").src = "img/mario-on.png";
             } else if (nfc.bytesToString(ndefMessage[0].payload).substring(0, 3) == "Tim"){
                 title.innerHTML = nfc.bytesToString(ndefMessage[0].payload).substring(0, 6);
